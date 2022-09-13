@@ -5,7 +5,11 @@ from __future__ import annotations
 import argparse
 import datetime
 import logging
-from typing import List, Literal, TypedDict, Union
+try:
+    from typing import Literal
+except ImportError:
+    from typing_extensions import Literal
+from typing import List, TypedDict, Union
 import wfc.wfc_control as wfc_control
 import xml.etree.ElementTree as ET
 import os
