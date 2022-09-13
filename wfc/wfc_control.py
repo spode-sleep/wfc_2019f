@@ -1,7 +1,11 @@
 from __future__ import annotations
 
 import datetime
-from typing import Any, Callable, Dict, List, Literal, Optional, Set, Tuple
+try:
+    from typing import Literal
+except ImportError:
+    from typing_extensions import Literal
+from typing import Any, Callable, Dict, List, Optional, Set, Tuple
 from .wfc_tiles import make_tile_catalog
 from .wfc_patterns import (
     pattern_grid_to_tiles,
